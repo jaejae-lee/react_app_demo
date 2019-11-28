@@ -1,9 +1,9 @@
 import React from 'react';
 
 
-const Square = ({ color, square }) => (
+const Square = ({ color }) => (
     <div style= {
-      {width: '200px', height: '200px', background: color, display: square } 
+      {width: '200px', height: '200px', background: color} 
       } >
       
     </div>
