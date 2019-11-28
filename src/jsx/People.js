@@ -1,13 +1,17 @@
 import React from 'react';
 
-let names = ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"];
-
-const People = () => (
+const People = ( { names } ) => (
+    !names ? <p> Nothing to see here </p> :
     <ul>
-       {names.map((person, index) => (
-           <li key={ index }> { person } </li> 
-       ))}
-    </ul> );
+        { names.map((person, index) => (
+            <li key={ index }> { person } </li> 
+        )) } 
+    </ul>
+);
+
+// People.defaultProps = {
+//     names: "Nothing to see here"
+// };
 
 export default People;
 
