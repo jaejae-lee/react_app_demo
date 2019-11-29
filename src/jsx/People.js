@@ -1,23 +1,29 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const People = ( { names } ) => (
-    //regular js mode - don't need {}
-    !names ? <p> Nothing to see here </p> :
-    // when you open < > you are in jsx mode 
-    <ul>
-        {/* need { } to go into js world from jsx world */}
-        { names.map((person, index) => (
-            <li key={ index }> { person } </li> 
-        )) } 
-    </ul>
-);
+class People extends Component {
 
-//default props doesnt work 
-// there's no sensible default prop here 
-//names -> array, default -> string ( can do empty array but then it will show the empty array, not a message)
+    handleClick() {
+        console.log("Hello world");
+      }
 
+    render() { 
+        let { names } = this.props;
+        return (
+            !names ? <p> Nothing to see here </p> :
+            <ul onClick={ this.handleClick }> 
 
+            { names.map((person, index) => (
+                <li key={ index }> { person } </li> )) } 
+
+            </ul>
+        );
+    }
+}
+ 
 export default People;
+
+
+
 
 
 
