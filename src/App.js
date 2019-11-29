@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import Stuff from './basic class comp/Stuff';
+import Stuff from './Stuff';
 
 
 function App() {

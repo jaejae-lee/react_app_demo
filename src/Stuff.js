@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Header from './Header';
-import Para from './Paragraph';
-import Square from './Square';
-import People from './People';
+import Header from './basic class comp/Header';
+import Para from './basic class comp/Paragraph';
+import Square from './basic class comp/Square';
+import People from './basic class comp/People';
 
-import Clicked from '../class comp with state/Clicked';
+import Clicked from './class comp with state/Clicked';
 
 const Stuff = ( { square } ) => (
     <>
