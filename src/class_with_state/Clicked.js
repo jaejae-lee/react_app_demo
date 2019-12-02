@@ -5,7 +5,7 @@ class Clicked extends Component {
         super(props)
         
         this.state = { 
-            message: "Not clicked",
+            message: false,
         };
 
         this.handleClick = this.handleClick.bind(this);
@@ -13,14 +13,14 @@ class Clicked extends Component {
 
     handleClick() {
     
-        this.setState({ message: "Clicked" });
+        this.setState({ message: true });
     }
 
 
     render() {
 
         return (
-          <p onClick={ this.handleClick }>{ this.state.message }
+          <p onClick={ this.handleClick }>{ this.state.message ? "Clicked" : "Not clicked" }
           </p>  
           );
     }

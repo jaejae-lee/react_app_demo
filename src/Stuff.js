@@ -1,19 +1,21 @@
 import React from 'react';
 
-import Header from './basic class comp/Header';
-import Para from './basic class comp/Paragraph';
-import Square from './basic class comp/Square';
-import People from './basic class comp/People';
+import Header from './basic_class/Header';
+import Para from './basic_class/Paragraph';
+import Square from './class_with_state/Square';
+import People from './basic_class/People';
 
-import Clicked from './class comp with state/Clicked';
+import Clicked from './class_with_state/Clicked';
+
 
 const Stuff = ( { square } ) => (
     <>
         <Header>Hello, World</Header>
         <Para>I'm a paragraph</Para>
-        { square ? <Square color= "lime" /> : null }
+        { square ? <Square color= 'hotpink' /> : null }
         <People names = { ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"] } />
         <Clicked />
+
     </>
 );
 
