@@ -4,7 +4,6 @@ import Header from './basic_class/Header';
 import Para from './basic_class/Paragraph';
 import Square from './class_with_state/Square';
 import People from './basic_class/People';
-
 import Clicked from './class_with_state/Clicked';
 
 

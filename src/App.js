@@ -1,13 +1,15 @@
 import React from 'react';
 import './App.css';
 
-import Stuff from './Stuff';
+// import Stuff from './Stuff';
+import Forms from './Forms';
 
 
 function App() {
   return (
     <div className="App">
-      <Stuff />
+      {/* <Stuff /> */}
+      <Forms />
     </div>
   );
 }
