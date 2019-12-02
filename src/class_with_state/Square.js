@@ -1,42 +1,35 @@
 import React, { Component } from 'react';
 
 class Square extends Component {
-  constructor(props){
-    super(props)
-    
-    this.state = { 
-        color: "red",
-    };
+  constructor(props) {
+      super(props);
 
-    this.handleClick = this.handleClick.bind(this);
+      this.state = {
+          red: true,
+      };
 
-  };
+      this.handleClick = this.handleClick.bind(this);
+  }
 
-    handleClick() {
-      let currentColor = this.state.color;
-      let { color } = this.props;
+  handleClick() {
+      this.setState({
+          red: !this.state.red,
+      });
+  }
 
-      this.setState({ color : currentColor === "red" ? color : "red" });
+  render() {
+      let colour = this.state.red ? "red" : this.props.colour;
 
-       // if (currentColor === "red") {
-      //   this.setState({ color : color });
-      // } else {
-      //   this.setState({ color : "red" });
-      // }
-      
-    };
-
-  render() { 
-
-    return ( 
-      <div onClick={ this.handleClick }
-      style= { {
-          width: '200px', height: '200px',
-          background: this.state.color,
-      } } 
-      />
-    );
-
+      return (
+          <div
+              onClick={ this.handleClick }
+              style={{
+                  height: 200,
+                  width: 200,
+                  background: colour,
+              }}
+          />
+      );
   }
 }
 

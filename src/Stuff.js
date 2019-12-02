@@ -8,14 +8,15 @@ import People from './basic_class/People';
 import Clicked from './class_with_state/Clicked';
 
 
+
 const Stuff = ( { square } ) => (
     <>
         <Header>Hello, World</Header>
         <Para>I'm a paragraph</Para>
-        { square ? <Square color= 'hotpink' /> : null }
+        { square ? <Square colour= 'hotpink' /> : null }
         <People names = { ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"] } />
         <Clicked />
-
+       
     </>
 );
 
