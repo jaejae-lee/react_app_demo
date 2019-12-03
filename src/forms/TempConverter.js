@@ -7,7 +7,7 @@ class TempConverter extends Component {
     constructor(props){
         super(props);
         this.state = {
-            celcius: 0,
+            celcius: '0',
         }
 
         this.handleFerenheitChange = this.handleFerenheitChange.bind(this);
