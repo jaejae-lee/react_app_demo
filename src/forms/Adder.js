@@ -5,7 +5,7 @@ class Adder extends Component {
     constructor(props){
         super(props);
         this.state = { 
-            input: "",
+            input: "", // input value : always keep as a string 
             list: [],
          }
 
@@ -15,11 +15,16 @@ class Adder extends Component {
 
 
     handleChange(e) {
-        this.setState({input: e.currentTarget.value,});
+        this.setState({input: e.currentTarget.value,}); // this DOM returns a string 
     }
 
     handleClick(e) {
-        this.setState({ list: [...this.state.list, +this.state.input ] });
+        let {list, input } = this.state;
+
+        this.setState({ 
+            list: [...list, +input ], // turn into number when you put it into an array
+            input: "", 
+         });
     }
 
     render() { 

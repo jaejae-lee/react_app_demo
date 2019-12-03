@@ -5,6 +5,8 @@ import List from './forms/List';
 import Adder from './forms/Adder';
 import TempConverter from './forms/TempConverter';
 
+import Transform from './forms/Transform';
+
 
 const Forms = ( ) => (
     <>
@@ -12,6 +14,7 @@ const Forms = ( ) => (
         <List />
         <Adder />
         <TempConverter />
+        <Transform />
     </>
 );
 

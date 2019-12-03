@@ -25,7 +25,7 @@ class List extends Component {
          });
     }
 
-    render() { 
+    render() {
         return ( 
             <div className="form-group">
                 <input
