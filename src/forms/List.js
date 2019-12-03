@@ -19,7 +19,10 @@ class List extends Component {
     }
 
     handleClick(e) {
-        this.setState({ list: [...this.state.list, this.state.input ] });
+        this.setState({ 
+            list: [...this.state.list, this.state.input ],
+            input: ""
+         });
     }
 
     render() { 
@@ -32,7 +35,7 @@ class List extends Component {
                 />
 
                 <ul>
-                    { this.state.list.map((Listitem, i) => <li key = { i }> { this.state.list[i] } </li> ) }
+                    { this.state.list.map((Listitem, i) => <li key = { i }> { Listitem } </li> ) }
                 </ul>
 
                 <button onClick = { this.handleClick } >Add</button>
