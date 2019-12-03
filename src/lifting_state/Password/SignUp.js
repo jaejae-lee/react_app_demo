@@ -34,7 +34,7 @@ class SignUp extends Component {
                           handleChange={ this.handleChange }
                 
                           style = { {
-                              borderColor : password === confirm && password.length > minimumLength ? "blue" : "red"
+                              borderColor : password === confirm && password.length > minimumLength && confirm.length > minimumLength ? "blue" : "red"
                           } }
 
                           />
