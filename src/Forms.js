@@ -14,7 +14,7 @@ const Forms = ( ) => (
         <List />
         <Adder />
         <TempConverter />
-        <Transform />
+        <Transform transform={ x=> x * x }/>
     </>
 );
 
