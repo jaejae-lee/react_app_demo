@@ -1,19 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Para extends Component {
-
-    render() { 
-
-        let { children } = this.props;
-
-        return (
-            <p>{ children }</p>
-        );
-    }
-}
+const Para = ({ children }) => (
+    <p>{ children }</p>
+);
 
 Para.defaultProps = {
     children: "Hello, world"
-  };
-  
+};
+
 export default Para;
