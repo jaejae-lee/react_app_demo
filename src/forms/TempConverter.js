@@ -10,11 +10,11 @@ class TempConverter extends Component {
             celcius: '0',
         }
 
-        this.handleFerenheitChange = this.handleFerenheitChange.bind(this);
+        this.handleFahrenheitChange = this.handleFahrenheitChange.bind(this);
         this.handleCelcius = this.handleCelcius.bind(this);
     }
 
-    handleFerenheitChange(e) {
+    handleFahrenheitChange(e) {
         this.setState({
             celcius: (e.currentTarget.value - 32 ) * 5/9,
         });
@@ -35,10 +35,10 @@ class TempConverter extends Component {
                         value = {this.state.celcius}
                         handleChange={ this.handleCelcius }/>
         
-                    <Temp name = "Ferenheit" 
+                    <Temp name = "Fahrenheit" 
               
                         value = {(this.state.celcius * 9/5 ) + 32}
-                        handleChange={ this.handleFerenheitChange }/>
+                        handleChange={ this.handleFahrenheitChange }/>
     
             </div>
         );
