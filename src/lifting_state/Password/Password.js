@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Password = ( { label, handleChange,  style } ) => (
+const Password = ( { label, handleChange, valid } ) => (
     <>
         <label>{ label }</label>
         <input type = "number"
                label = { label }
                onChange={ handleChange }
-               style = { style }
+               style = { valid }
         />
      </>
 

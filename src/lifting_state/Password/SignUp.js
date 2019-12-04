@@ -7,17 +7,23 @@ class SignUp extends Component {
         super(props);
 
         this.state = {
-            password: "0",
-            confirm: "0",
+            password: "",
+            confirm: "",
         }
 
-        this.handleChange = this.handleChange.bind(this);
+        this.handlePassword = this.handlePassword.bind(this);
+        this.handleConfirm = this.handleConfirm.bind(this);
         
     }
 
-    handleChange(e) {
+    handlePassword(e) {
         this.setState({
             password: e.currentTarget.value,
+        });
+    }
+
+    handleConfirm(e) {
+        this.setState({
             confirm: e.currentTarget.value
         });
     }
@@ -26,27 +32,21 @@ class SignUp extends Component {
 
         let { minimumLength } = this.props;
         let { password, confirm } = this.state;
+
+        let valid = (password === confirm) && (password.length >= minimumLength) && (confirm.length >= minimumLength);
         
         return (
             <>
                 <Password label = "password"
                           value = { password }
-                          handleChange={ this.handleChange }
-                
-                          style = { {
-                              borderColor : password === confirm && password.length > minimumLength && confirm.length > minimumLength ? "blue" : "red"
-                          } }
-
-                          />
+                          handleChange={ this.handlePassword }
+                          valid= { { borderColor : valid ?  "blue" : "red" } }
+                        />
                 <Password label = "Confirm Password"
                           value = { confirm }
-                          handleChange={ this.handleChange }
-
-                          style = { {
-                            borderColor : password === confirm && password.length > minimumLength ? "blue" : "red"
-                        } }
-           
-                          />
+                          handleChange={ this.handleConfirm }
+                          valid= { { borderColor : valid ?  "blue" : "red" } }
+                        />
             </> 
           );
     };
