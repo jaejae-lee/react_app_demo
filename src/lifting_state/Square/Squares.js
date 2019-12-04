@@ -14,16 +14,16 @@ class Squares extends Component {
     render() { 
         return (
             <>
-                <Square 
+                <Square name = "square1" 
                         selected = { this.state.selected === 1 }
                         handleClick = { () => this.setState( {selected: 1} ) }
-                        color = "lime"
+                        color = { this.props.color } 
                          />
 
                 <Square name = "square2" 
                         selected = { this.state.selected === 2 }
                         handleClick = { () => this.setState( {selected: 2} ) }
-                        color = "lime"
+                        color = { this.props.color } 
                          />
             </>
           );
