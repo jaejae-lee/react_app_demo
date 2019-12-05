@@ -32,11 +32,11 @@ class CatchMeIfYouCan extends Component {
                   style = {{
                       position: "relative",
                       top: this.state.x,
-                      margin: (this.state.x),
+                      margin:  this.state.x,
                       display: "block",
                   }}
           > 
-          Catch ME!!
+          Catch Me If You Can!!
           </Button>
         </>
      );  

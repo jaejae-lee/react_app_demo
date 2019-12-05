@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import  { ProgressBar } from "react-bootstrap";
-import  { Button } from "react-bootstrap";
+import  { ProgressBar, Button } from "react-bootstrap";
 
 class Progress extends Component {
     constructor(props) {
@@ -28,19 +27,19 @@ class Progress extends Component {
        
      return(
         <>
-          <ProgressBar now={now} 
+          <ProgressBar animated now = {now} 
                        label={`${now}%`}
-                       variant="info" 
+                       variant= "info"
                        style = {{
-                        margin: "20px 20px",
-                    }}
+                        margin: "10px",
+                        }} 
             />
 
           <Button variant="outline-primary"
                   onClick={ this.handleClick }
                   disabled={now === 100}
                   style = {{
-                      margin: "10px 20px",
+                    margin: "10px",
                   }}
           > 
           More!! 
