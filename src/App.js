@@ -7,6 +7,8 @@ import People from './basic_class/People';
 import Squares from './lifting_state/Square/Squares';
 import SignUp from './lifting_state/Password/SignUp';
 import PreBuiltComp from './PreBuiltComp';
+import Article from './blog/Article';
+import Articles from './blog/Articles';
 
 import Footer from './Footer';
 import FourOhFour from './FourOhFour';
@@ -16,7 +18,6 @@ import {
   Route,
   Switch,
 } from "react-router-dom";
-
 
 const App = () => (
 
@@ -32,7 +33,7 @@ const App = () => (
           )}
           />
 
-          <Route path="/squares" render={ () => (
+          <Route exact path="/squares" render={ () => (
             <>
               <Squares color = "yellow"  />
               <Squares color = "lime"  />
@@ -41,17 +42,29 @@ const App = () => (
           )}
           />
 
-
-          <Route path="/signup" render={ () => (
+          <Route exact path="/signup" render={ () => (
             <SignUp />
           )}
           />
 
-          <Route path="/prebuilt" render={ () => (
+          <Route exact path="/prebuilt" render={ () => (
             <PreBuiltComp />
           )}
           />
 
+            {/* create function comes first then get article/:id.
+            order of routing is important 
+            specific ones later  */}
+
+          <Route exact path="/articles/:id" render={ ( { match } ) => (
+            <Article article={ match.params.id } />
+          ) } 
+          />
+
+          <Route exact path="/articles" render={ () => (
+            <Articles />
+          )}
+          />
 
           <FourOhFour />
         </Switch>
