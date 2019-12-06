@@ -23,26 +23,26 @@ class PasswordStrength extends Component {
     render() { 
         let { password } = this.state;
 
-        let fieldColour = password.length === 0 ? null : password .length < 9 ? 'red' : password.length < 16 ? 'orange' : 'green';
+        let fieldColour = password.length === 0 ? null : password.length < 9 ? 'red' : password.length < 16 ? 'orange' : 'green';
     
         return ( 
-        <Form>
-            <Form.Group controlId="formPlaintextPassword">
-                
-                <Form.Label column sm="2">
-                Password
-                </Form.Label>
- 
-                <Form.Control 
-                type="password"               
-                placeholder="Password"
-                value={ password }
-                onChange={ this.handleChange }
-                style = { { background: fieldColour } } 
-                />
+            <Form>
+                <Form.Group controlId="formPlaintextPassword">
+                    
+                    <Form.Label column sm="2">
+                    Password
+                    </Form.Label>
+    
+                    <Form.Control 
+                    type="password"               
+                    placeholder="Password"
+                    value={ password }
+                    onChange={ this.handleChange }
+                    style = { { background: fieldColour } } 
+                    />
 
-            </Form.Group>
-        </Form>
+                </Form.Group>
+            </Form>
          ); 
     }
 }
